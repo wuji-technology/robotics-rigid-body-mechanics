@@ -1,19 +1,44 @@
-# Robotics Rigid Body Mechanics
+# robotics-rigid-body-mechanics
 
-机器人刚体力学讲义，涵盖机器人学中刚体运动与动力学的核心理论。
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) [![Release](https://img.shields.io/github/v/release/wuji-technology/robotics-rigid-body-mechanics)](https://github.com/wuji-technology/robotics-rigid-body-mechanics/releases)
 
-## 内容
+Lecture notes on robotics rigid body mechanics. LaTeX document covering core theories of rigid body motion and dynamics in robotics, including rotation, screw theory, dynamics, and multibody systems.
 
-- 旋转与姿态表示（Rotation）
-- 螺旋理论（Screw Theory）
-- 刚体动力学（Dynamics）
-- 多体系统（Multibody Systems）
+## Table of Contents
 
-## 构建 PDF
+- [Repository Structure](#repository-structure)
+- [Usage](#usage)
+- [Contact](#contact)
 
-### 依赖
+## Repository Structure
 
-需要安装 TeX 发行版（如 TeX Live 或 MiKTeX）。
+```text
+├── images/
+├── sections/
+│   ├── cover.tex
+│   ├── foreword.tex
+│   ├── intro.tex
+│   ├── rotation.tex
+│   ├── screw.tex
+│   ├── dynamics.tex
+│   └── multibody.tex
+├── main.tex
+└── README.md
+```
+
+### Directory Description
+
+| Directory | Description |
+|-----------|-------------|
+| `images/` | Image resources for the document |
+| `sections/` | Chapter content files including cover, foreword, introduction, rotation, screw theory, dynamics, and multibody systems |
+| `main.tex` | Main LaTeX document entry point |
+
+## Usage
+
+### Prerequisites
+
+- TeX distribution (TeX Live or MiKTeX)
 
 **Ubuntu/Debian:**
 
@@ -29,39 +54,25 @@ sudo tlmgr update --self
 sudo tlmgr install ctex standalone mathtools textgreek greek-fontenc fancyhdr footmisc enumitem cbfonts
 ```
 
-### 编译
+### Running
 
-使用 `xelatex` 编译（需要编译两次以生成目录）：
+Compile with `xelatex` (run twice to generate table of contents):
 
 ```bash
 xelatex main.tex
 xelatex main.tex
 ```
 
-或使用 `latexmk` 自动处理多次编译：
+Or use `latexmk` for automatic multi-pass compilation:
 
 ```bash
 latexmk -xelatex main.tex
 ```
 
-编译成功后会生成 `main.pdf`。
+### Output
 
-## 目录结构
+Successful compilation generates `main.pdf`.
 
-```
-.
-├── main.tex          # 主文档
-├── sections/         # 各章节内容
-│   ├── cover.tex     # 封面
-│   ├── foreword.tex  # 前言
-│   ├── intro.tex     # 简介
-│   ├── rotation.tex  # 旋转
-│   ├── screw.tex     # 螺旋理论
-│   ├── dynamics.tex  # 动力学
-│   └── multibody.tex # 多体系统
-└── images/           # 图片资源
-```
+## Contact
 
-## License
-
-MIT
+For any questions, please contact support@wuji.tech.
