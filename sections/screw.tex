@@ -5,7 +5,7 @@
 \section{空间中的运动和螺旋理论}
 \subsection{章节概述}
 在上一章，我们研究了二维和三维空间中的旋转。在研究旋转的过程中，我们假设两个参照系的原点重合。研究旋转帮助我们建立了许多宝贵的直觉。
-不过，真实物体在三维空间中的运动必然会涉及到两个参照系之间相对位置的变化。那么在这一章中，我们就将介绍三维空间中物体的运动。
+不过，真实物体在三维空间中的运动必然会涉及到两个参照系之间相对位置的变化那么在这一章中，我们就将介绍三维空间中物体的运动。
 
 %那么，要描述物体在空间中完整的状态，rigid body会发生位置上的移动，也就是translation，体现在frame上就是origin肯定不会再重合了，会发生相对运动。
 
@@ -100,7 +100,7 @@ R_\textnormal{ab} & \mathbf{p}_\textnormal{ab} \\
 \end{mytheorem}
 
 \begin{mytheorem}
-对于变换矩阵$A$、$B$、$C$，$(AB)C = A(BC)$
+对于变换矩阵$A$、$B$、$B$，$(AB)C = A(BC)$
 \end{mytheorem}
 
 \begin{mytheorem}
@@ -163,7 +163,7 @@ $T_\textnormal{ab}T_\textnormal{ba} = I$
 0 & 1
 \end{bmatrix} \label{eq:dottbs}
 \end{align}
-在式子(\ref{eq:dottbs})中，$\dot{T}_\text{bs} = \dot{T}_\text{bs}^\text{b}$。观察式子(\ref{eq:dottbs})中的$\dot{\mathbf{p}}_\text{bs}$，不难发现当$\{\text{b}\}$相对于$\{\text{s}\}$运动时，$\{\text{s}\}$的坐标表达在$\{\text{b}\}$中既受到角速度$\dot{R}_\text{sb}$的影响，也受到原点本身速度$\dot{\mathbf{p}}_\text{sb}$影响。
+在式子(\ref{eq:dottbs})中，$\dot{T}_\text{bs} = \dot{T}_\text{bs}^\text{b}$。观察式子(\ref{eq:dottbs})中的$\dot{\mathbf{p}}_\text{bs}$，不难发现当$\{\text{b}\}$相对于$\{\text{s}\}$运动时，$\{\text{s}\}$的坐标表达在$\{\text{b}\}$中既收到角速度$\dot{R}_\text{sb}$的影响，也受到原点本身速度$\dot{\mathbf{p}}_\text{sb}$影响。
 
 不同于旋转中性质\ref{th:velocityrelativity}（速度的相对性），即旋转速度可以直接通过旋转矩阵的微分直接叠加得到，参照系的相对速度不能通过直接叠加变换矩阵的微分。即
 \begin{align}
@@ -197,7 +197,7 @@ T = e^{[\mathbf{x}]\theta}
 
 考虑到之前讨论式子(\ref{eq:dottaddwrong})无法成立的原因是因为旋转导致的线速度在不同位置不同，我们新的描述必然是会将旋转的速度和平移的速度进行解耦的。观察式子(\ref{eq:dottsb})，我们可以发现，对于空间中的一个参照系的速度可以分为角速度（velocity）和线速度（linear velocity），其中角速度我们已经研究过了，可以通过$\hat{\mathbf{w}}\dot{\theta}$来描述。按照解耦线速度的直觉，我们可以将线速度分为由旋转引起的速度和与旋转无关的速度。
 
-将问题整理并重新描述即，已知参照系的方位$T$和速度$\dot{T}$，能否获得将参照系中与旋转有关的速度和与旋转无关的速度解耦？由于我们从$T$中的$R$和$\dot{T}$中的$\dot{R}$可以获得角速度，$\dot{T}$中的$dot{\mathbf{p}}$即是线速度。因此问题可以被重新描述为：如果我们知道参照系的角速度和线速度，能否将线速度解耦为与旋转无关的速度和与旋转有关的速度？
+将问题整理并重新描述即，已知参照系的方位$T$和速度$\dot{T}$，能否获得将参照系中与旋转有关的速度和与旋转无关的速度解耦？由于我们从$T$中的$R$和$\dot{T}$中的$\dot{R}$可以获得角速度，$\dot{T}$中的$dot{\mathbf{p}}$即是线速度。因此问题可以被重新描述为：如果我们知道参照系的角速度和线速度，能否至将线速度解耦为与旋转无关的速度和与旋转有关的速度？
 
 [TODO:图片]如图所示，根据直觉，我们不难得知，由旋转引起的速度垂直于旋转半径和旋转轴，为切向速度（tangential velocity），那么线速度除去切向速度即为与旋转无关的平移速度（translational velocity）。但问题在于，旋转轴位置的不同会导致某一点（比如说参照系的原点）相对于旋转轴旋转半径的变化，那么对应的切向速度就会随之变化。
 
@@ -305,7 +305,7 @@ R_\text{ab}&0\\
 
 从螺旋理论中我们还可以得知，由于我们厘清了旋转与平移的关系，因此结合刚体的性质，如果我们获得了刚体中一个点的旋动，那么我们就能获得刚体上任意一点的旋动，或者与刚体同步的空间中的任意一点的旋动。
 
-\subsubsection{关于螺旋理论的定义与性质}
+\subsubsection{关于螺旋理论的定于与性质}
 \begin{mydefinition}
 刚体相对任意参照系$\{\textnormal{a}\}$发生运动时，随刚体一起运动的机体参照系$\{\textnormal{b}\}$，定义旋动$\mathbf{u}\in \mathbb{R}^6$
 \begin{align*}
@@ -405,7 +405,7 @@ $\mathbf{u}_\textnormal{ba}^\textnormal{b} = -\mathbf{u}_\textnormal{ab}^\textno
 \end{bmatrix} \label{eq:brackettwist}
 \end{align}
 
-其实通过直接计算$\dot{T}T^{-1}$也可以得到式子(\ref{eq:brackettwist})。
+其实通过直接计算$\dot{T}T^{-1}$得可以得到式子(\ref{eq:brackettwist})。
 
 有了式子(\ref{eq:brackettwist})，便有
 \begin{align}
