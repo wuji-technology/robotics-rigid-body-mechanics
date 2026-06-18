@@ -19,9 +19,9 @@
 *.snm
 *.vrb
 
-# Output PDF (built from source，main.pdf 例外，便于直接阅读)
+# Output PDF (built from source，robotics-rigid-body-mechanics.pdf 例外，便于直接阅读)
 *.pdf
-!main.pdf
+!robotics-rigid-body-mechanics.pdf
 
 # Editor files
 *.swp
