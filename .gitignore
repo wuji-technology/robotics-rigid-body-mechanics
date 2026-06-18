@@ -19,8 +19,9 @@
 *.snm
 *.vrb
 
-# Output PDF (built from source)
+# Output PDF (built from source，main.pdf 例外，便于直接阅读)
 *.pdf
+!main.pdf
 
 # Editor files
 *.swp
