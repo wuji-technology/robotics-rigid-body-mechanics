@@ -72,9 +72,9 @@ m = \sum^{n}_{i=1} m_i
 \end{align}
 式子(\ref{eq:sumofforce})成立的。具体存在性的证明会在之后给出。
 
-也就是说，任何两个力的效果的叠加是也可以被视作作用于一点。而任何对刚体的力的效果不论是作用于点、平面还是体积，都可以被视作为多个力的效果的叠加，因此可以被等效为作用于一点的力和对应力矩。
+也就是说，任何两个力的效果的叠加也可以被视作作用于一点。而任何对刚体的力的效果不论是作用于点、平面还是体积，都可以被视作为多个力的效果的叠加，因此可以被等效为作用于一点的力和对应力矩。
 
-参考我们表示旋动分为两部分，角速度和线速度，并且对于螺旋轴的位置并没有直接体现在旋动当中，而是通过参照系的原点的线速度来间接体现的。以同样的思路，我们构建螺旋理论框架下的力的表示。如果刚体上一个力作用于机体参照系$\{\text{b}\}$所对应的刚体。这个力起名为$\vec{\text{b}}$，意为作用于$\{\text{b}\}$所对应的刚体的某个力。并且作用力作用于于点Q，点Q在任意参照系$\{\text{a}\}$下记作$\mathbf{r}^\text{a}_{\vec{\text{b}}}$，力在$\{\text{a}\}$下表达下记作$\mathbf{f}^{\,\text{a}(3)}_{\vec{\text{b}}}$，则有力矩$\textbf{\texttau}_{\vec{\text{b}}}^\text{a}$
+参考我们表示旋动分为两部分，角速度和线速度，并且对于螺旋轴的位置并没有直接体现在旋动当中，而是通过参照系的原点的线速度来间接体现的。以同样的思路，我们构建螺旋理论框架下的力的表示。如果刚体上一个力作用于机体参照系$\{\text{b}\}$所对应的刚体。这个力起名为$\vec{\text{b}}$，意为作用于$\{\text{b}\}$所对应的刚体的某个力。并且作用力作用于点Q，点Q在任意参照系$\{\text{a}\}$下记作$\mathbf{r}^\text{a}_{\vec{\text{b}}}$，力在$\{\text{a}\}$下表达记作$\mathbf{f}^{\,\text{a}(3)}_{\vec{\text{b}}}$，则有力矩$\textbf{\texttau}_{\vec{\text{b}}}^\text{a}$
 \begin{align}
 \textbf{\texttau}_{\vec{\text{b}}}^\text{a} = \mathbf{r}^\text{a}_{\vec{\text{b}}} \times \mathbf{f}^{\,\text{a}(3)}_{\vec{\text{b}}}
 \end{align}
@@ -239,7 +239,7 @@ m = \sum^{n}_{i=1} m_i
 \mathbf{f}^{\,\text{b}(3)}_\text{\underline{b}b} = m \dot{\mathbf{v}}_{\text{\underline{b}b}} + m [\mathbf{w}_{\text{\underline{b}b}} ] \mathbf{v}_{\text{\underline{b}b}} = m \dot{\mathbf{v}}_{\text{\underline{b}b}} \label{eq:forceinetialframe}
 \end{align}
 
-并且我们同样改写式子(\ref{eq:linearvelocitymassi})式子、式子(\ref{eq:fmastationaryframe})和(\ref{eq:linearaccelerationmassi})，有
+并且我们同样改写式子(\ref{eq:linearvelocitymassi})、式子(\ref{eq:fmastationaryframe})和(\ref{eq:linearaccelerationmassi})，有
 \begin{align}
 \dot{\mathbf{p}}_{\text{\underline{b}}i} &= \mathbf{v}_{\text{\underline{b}}i} =\mathbf{v}_{\text{\underline{b}b}} + \mathbf{w}_{\text{\underline{b}b}} \times \mathbf{p}_{\text{b}i} \\
 \ddot{\mathbf{p}}_{\text{\underline{b}}i} &= \dot{\mathbf{v}}_{\text{\underline{b}b}}  + [\dot{\mathbf{w}}_{\text{\underline{b}b}}] \mathbf{p}_{\text{b}i} + [\mathbf{w}_{\text{\underline{b}b}} ] \mathbf{v}_{\text{\underline{b}b}} + [\mathbf{w}_{\text{\underline{b}b}} ]^2 \mathbf{p}_{\text{b}i} \label{eq:inertialbodyacceleration} \\
@@ -268,7 +268,7 @@ m = \sum^{n}_{i=1} m_i
 &= (-\sum m_i [\mathbf{p}_{\text{\underline{b}}i}]^2 )\dot{\mathbf{w}}_{\text{\underline{b}b}} + [\mathbf{w}_{\text{\underline{b}b}} ](-\sum m_i [\mathbf{p}_{\text{\underline{b}}i}]^2 )\mathbf{w}_{\text{\underline{b}b}} \label{eq:torqueinertialframe2}
 \end{align}
 
-观察式子(\ref{eq:torqueinertialframe2})可以发现，$(-\sum m_i [\mathbf{p}_{\text{\underline{b}}i}]^2 )$这一部分出现了两次，而且是角加速度的系数，类比可以相当于旋转系统里的质量，具有一定的物理意义。因此把这部分单独写成出来，有[TODO：改变标记说明，加粗大写字母表示矩阵]
+观察式子(\ref{eq:torqueinertialframe2})可以发现，$(-\sum m_i [\mathbf{p}_{\text{\underline{b}}i}]^2 )$这一部分出现了两次，而且是角加速度的系数，类比可以相当于旋转系统里的质量，具有一定的物理意义。因此把这部分单独写出来，有[TODO：改变标记说明，加粗大写字母表示矩阵]
 \begin{align}
 \mathbf{I}_\text{b} = (-\sum m_i [\mathbf{p}_{\text{\underline{b}}i}]^2 ) = \begin{bmatrix}
 \sum m_i(p_{\text{b}iy}^2 + p_{\text{b}iz}^2 ) & -\sum m_i p_{\text{b}ix} p_{\text{b}iy} & -\sum m_i p_{\text{b}ix} p_{\text{b}iz} \\

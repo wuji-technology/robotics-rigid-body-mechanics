@@ -11,7 +11,7 @@
 在这一小节，我们会先引入一个静止的固定参照系作为我们研究运动的基础参照系，在此基础上再引入一个会不断变化或运动的机体参照系，并研究机体参照系与固定参照系之间转换。在研究转换时，我们引入旋转矩阵的概念，并解释旋转矩阵的作用和三个意义：1. 用来表达参照系；2. 对物体进行旋转的操作；3. 切换参照系。最后我们讨论一些关于二维旋转矩阵的性质。
 
 \subsubsection{二维旋转矩阵}
-我们首先确定一个固定的坐标系，作为我们研究运动的基础，这个坐标系可以是你想设置的任何地方，可以是宇宙的中心，或者你想研究的机器人位置的基座或，或者是大地，总之怎么方便怎么来。但一旦设定了，就不能动了（你真的想这个参照系动也可以，但你研究问题总得有个静止的参照系作为参照更方便一点，不是吗？），是一个惯性参照系（reference frame of inertia）。我们把这个惯性参照系称作为固定参照系（fixed frame），或者叫空间坐标系（spatial frame）。
+我们首先确定一个固定的坐标系，作为我们研究运动的基础，这个坐标系可以是你想设置的任何地方，可以是宇宙的中心，或者你想研究的机器人位置的基座，或者是大地，总之怎么方便怎么来。但一旦设定了，就不能动了（你真的想这个参照系动也可以，但你研究问题总得有个静止的参照系作为参照更方便一点，不是吗？），是一个惯性参照系（reference frame of inertia）。我们把这个惯性参照系称作为固定参照系（fixed frame），或者叫空间坐标系（spatial frame）。
 
 \begin{figure}[H]
 \centering
@@ -20,7 +20,7 @@
   \label{fig:boat1}
 \end{figure}
 
-我们简单一点，就看一个二维的固定参照系。我们把这个固定参照系记作$\{\text{s}\}$，其中s代表spatial，意思是空间中的。这是本讲义的一个标记习惯习惯：$\{$和$\}$当中包括字母，比如$\{\text{x}\}$，代表某个参照系。
+我们简单一点，就看一个二维的固定参照系。我们把这个固定参照系记作$\{\text{s}\}$，其中s代表spatial，意思是空间中的。这是本讲义的一个标记习惯：$\{$和$\}$当中包括字母，比如$\{\text{x}\}$，代表某个参照系。
 
 我们要描述这个参照系的有很多方法，一种方法是把它的两个基（单数basis，复数bases）——即x轴和y轴——描述出来就好了。x轴和y轴是两个单元向量（unit vector），因此以这两个单元向量以$\{\text{s}\}$为参照系表达出来就是
 \begin{align}
@@ -165,7 +165,7 @@ $R^{-1} = R^T$ \label{th:2dinversetranspose}
 
 对于性质\ref{th:2dminustheta}，在几何上比较直观。如果$\{\text{b}\}$相对$\{\text{a}\}$有$\theta$的旋转角，那么$\{\text{a}\}$相对$\{\text{b}\}$就有$-\theta$的旋转角。
 
-对于性质\ref{th:2dtranspose}，在代数上上直接通过观察定义\ref{def:2drotation}，即观察$R(\theta)$和$R(-\theta)$即可得证。但我们更关心的是它的几何意义。
+对于性质\ref{th:2dtranspose}，在代数上直接通过观察定义\ref{def:2drotation}，即观察$R(\theta)$和$R(-\theta)$即可得证。但我们更关心的是它的几何意义。
 \begin{figure}[H]
 \centering
   \includegraphics[scale=0.3]{images/2d_projection.png}
@@ -188,7 +188,7 @@ R_\text{ba} &= \begin{bmatrix}
 \end{bmatrix}^T = R_\text{ab}^T \label{eq:2dtransposeaprojection}
 \end{align}
 
-性质\ref{th:2dinverse}可以通过代入性质\ref{th:2dtranspose}直接得到。从几何角度来说有多种理解方式，一种方式是：相当于把原来在$\{\text{a}\}$表达中的表达的，切换了一下，但最终还是在$\{\text{a}\}$中表达，其结果不变；另一种是：将一个物体正转一个角度后再反转回来，得到的结果和不转是一样的。
+性质\ref{th:2dinverse}可以通过代入性质\ref{th:2dtranspose}直接得到。从几何角度来说有多种理解方式，一种方式是：相当于把原来在$\{\text{a}\}$中表达的，切换了一下，但最终还是在$\{\text{a}\}$中表达，其结果不变；另一种是：将一个物体正转一个角度后再反转回来，得到的结果和不转是一样的。
 
 性质\ref{th:2dinversetranspose}可以直接由性质\ref{th:2dinverse}和性质\ref{th:2dtranspose}得到。
 
@@ -289,7 +289,7 @@ $R_\textnormal{ab}^{-1} = R_\textnormal{ab}^T$  \label{th:3dinversetranspose}
 对于三维旋转矩阵$A$和$B$，一般情况下$AB\neq BA$\label{th:3dcommutative}
 \end{mytheorem}
 
-对于性质\ref{th:3dproductclosure}，；几何角度可以直接沿用二维的思路，即性质\ref{th:2dproductclosure}的几何思路。
+对于性质\ref{th:3dproductclosure}，几何角度可以直接沿用二维的思路，即性质\ref{th:2dproductclosure}的几何思路。
 
 对于\ref{th:3dassociative}，代数角度是从矩阵的乘法中直接得到；几何角度可以直接沿用二维的思路，即性质\ref{th:3dassociative}的几何思路。
 
@@ -381,7 +381,7 @@ $\dot{R}_\text{sb}$的意义是，在$\{\text{s}\}$中表达$\{\text{b}\}$的xyz
 
 如图\ref{fig:velocityprojection}并观察式子(\ref{eq:rotationmatrixrateofchange})，xyz轴的变化速度其实就是$\{\text{b}\}$的坐标轴到$\{\text{s}\}$的坐标轴投影的变化速度。[TODO：图要重画，标记符号不对]
 
-我们从旋转矩阵的角度，即坐标轴的位置变化讨论了速度的表达方式。我们能否将坐标轴位置变化的速度，即$\dot{R}=\dot{R}_\text{sb}$与轴角定义的旋转联系在一起？我们描述旋转最简单的方式是绕一个轴进行$\theta$的旋转，那么描述旋转速度最简单的方式显然应当是绕着一个轴进行角速度$\dot{\theta}$的旋转。$\{\text{b}\}$绕着$\hat{\mathbf{w}}_\text{s}$以$\dot{\theta}$的旋转时（$\hat{\mathbf{w}}_\text{s}$表达在$\{\text{s}\}$种、中），$\{\text{b}\}$的xyz轴的速度表达在$\{\text{s}\}$中应当为
+我们从旋转矩阵的角度，即坐标轴的位置变化讨论了速度的表达方式。我们能否将坐标轴位置变化的速度，即$\dot{R}=\dot{R}_\text{sb}$与轴角定义的旋转联系在一起？我们描述旋转最简单的方式是绕一个轴进行$\theta$的旋转，那么描述旋转速度最简单的方式显然应当是绕着一个轴进行角速度$\dot{\theta}$的旋转。$\{\text{b}\}$绕着$\hat{\mathbf{w}}_\text{s}$以$\dot{\theta}$的旋转时（$\hat{\mathbf{w}}_\text{s}$表达在$\{\text{s}\}$中），$\{\text{b}\}$的xyz轴的速度表达在$\{\text{s}\}$中应当为
 \begin{align}
 \dot{\hat{\mathbf{x}}}_\text{sb} = (\hat{\mathbf{w}}_\text{s}\dot{\theta})\times \hat{\mathbf{x}}_\text{sb} \nonumber \\
 \dot{\hat{\mathbf{y}}}_\text{sb} = (\hat{\mathbf{w}}_\text{s}\dot{\theta})\times \hat{\mathbf{y}}_\text{sb} \nonumber \\
@@ -440,7 +440,7 @@ a_3 & 0 & -a_1\\
 \dot{R}_\text{sb}^{\text{b}} = R_\text{bs} \dot{R}_\text{sb}^{\text{s}} = R_\text{bs} \dot{R}_\text{sb}
 \end{align}
 
-实际上，$\dot{R}_\text{sb}^{\text{b}}$就是在$\{\text{b}\}$当中表达$\{\text{b}\}$自己的速度，我们把$\mathbf{w}_\text{s}$在$\{\text{b}\}$当中表达记作$\mathbf{w}_\text{b}$，那么有根据式子(\ref{eq:skewproduct})
+实际上，$\dot{R}_\text{sb}^{\text{b}}$就是在$\{\text{b}\}$当中表达$\{\text{b}\}$自己的速度，我们把$\mathbf{w}_\text{s}$在$\{\text{b}\}$当中表达记作$\mathbf{w}_\text{b}$，那么根据式子(\ref{eq:skewproduct})
 \begin{align}
 \dot{R}_\text{sb}^{\text{b}} = [\mathbf{w}_\text{b}]R_\text{bb} = [\mathbf{w}_\text{b}] \label{eq:computersbb}
 \end{align}

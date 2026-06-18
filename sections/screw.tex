@@ -53,7 +53,7 @@ R_\text{sb} \mathbf{q}_\text{b} + \mathbf{p}_\text{sb} \\
 1
 \end{bmatrix} \label{eq:transformpoint}
 \end{align}
-如图\ref{fig:transformpoint})，我们观察式子(\ref{eq:transformpoint})，$R_\text{sb}\mathbf{q}_\text{b}$相当于$\{\text{b}\}$和$\{\text{s}\}$重合时的情形，我们讨论三维旋转是一模一样的。那么式子(\ref{eq:transformpoint})这个空间变换可以可以这样理解：第一步：假想$\{\text{b}\}$与$\{\text{s}\}$完全重合，此时$\{\text{b}\}$无论是取向和原点位置都与$\{\text{s}\}$保持一致，并且$\mathbf{q}_\text{b}$对应的点Q跟随$\{\text{b}\}$一起。
+如图(\ref{fig:transformpoint})，我们观察式子(\ref{eq:transformpoint})，$R_\text{sb}\mathbf{q}_\text{b}$相当于$\{\text{b}\}$和$\{\text{s}\}$重合时的情形，我们讨论三维旋转是一模一样的。那么式子(\ref{eq:transformpoint})这个空间变换可以这样理解：第一步：假想$\{\text{b}\}$与$\{\text{s}\}$完全重合，此时$\{\text{b}\}$无论是取向和原点位置都与$\{\text{s}\}$保持一致，并且$\mathbf{q}_\text{b}$对应的点Q跟随$\{\text{b}\}$一起。
 
 第二步，在第一步的基础上，旋转$\{\text{b}\}$至$\{\text{b}\}$原来的取向，在这个过程中点Q的坐标在$\{\text{s}\}$中表达即为$R_\text{sb}\mathbf{q}_\text{b}$。
 
@@ -152,7 +152,7 @@ $T_\textnormal{ab}T_\textnormal{ba} = I$
 \end{align}
 在式子(\ref{eq:dottsb})中，$\dot{T}_\text{sb} = \dot{T}_\text{sb}^\text{s}$
 
-根据性质\ref{eq:calculatetba}，我们可以得到得到
+根据性质\ref{eq:calculatetba}，我们可以得到
 \begin{align}
 \dot{T}_\text{bs} = \begin{bmatrix}
 \dot{R}_\text{bs} & \dot{\mathbf{p}}_\text{bs}\\
@@ -197,7 +197,7 @@ T = e^{[\mathbf{x}]\theta}
 
 考虑到之前讨论式子(\ref{eq:dottaddwrong})无法成立的原因是因为旋转导致的线速度在不同位置不同，我们新的描述必然是会将旋转的速度和平移的速度进行解耦的。观察式子(\ref{eq:dottsb})，我们可以发现，对于空间中的一个参照系的速度可以分为角速度（velocity）和线速度（linear velocity），其中角速度我们已经研究过了，可以通过$\hat{\mathbf{w}}\dot{\theta}$来描述。按照解耦线速度的直觉，我们可以将线速度分为由旋转引起的速度和与旋转无关的速度。
 
-将问题整理并重新描述即，已知参照系的方位$T$和速度$\dot{T}$，能否获得将参照系的中与旋转有关的速度和与旋转无关的速度解耦？由于我们从$T$中的$R$和$\dot{T}$中的$\dot{R}$可以获得角速度，$\dot{T}$中的$dot{\mathbf{p}}$即是线速度。因此问题可以被重新描述为：如果我们知道参照系的角速度和线速度，能否至将线速度解耦为与旋转无关的速度和与旋转有关的速度？
+将问题整理并重新描述即，已知参照系的方位$T$和速度$\dot{T}$，能否获得将参照系中与旋转有关的速度和与旋转无关的速度解耦？由于我们从$T$中的$R$和$\dot{T}$中的$\dot{R}$可以获得角速度，$\dot{T}$中的$dot{\mathbf{p}}$即是线速度。因此问题可以被重新描述为：如果我们知道参照系的角速度和线速度，能否至将线速度解耦为与旋转无关的速度和与旋转有关的速度？
 
 [TODO:图片]如图所示，根据直觉，我们不难得知，由旋转引起的速度垂直于旋转半径和旋转轴，为切向速度（tangential velocity），那么线速度除去切向速度即为与旋转无关的平移速度（translational velocity）。但问题在于，旋转轴位置的不同会导致某一点（比如说参照系的原点）相对于旋转轴旋转半径的变化，那么对应的切向速度就会随之变化。
 
@@ -434,7 +434,7 @@ T(\hat{\mathbf{u}}_\text{sb}, \theta)=e^{[\hat{\mathbf{u}}_\text{sb}^\text{s}]\t
 \end{mydefinition}
 
 \begin{mytheorem}
-对于任意参照系$\{\textnormal{a}\}$和机体参照系$\{\textnormal{b}\}$，当$\{\textnormal{b}\}$下相对$\{\textnormal{a}\}$发生关于螺旋轴$\hat{\mathbf{u}}_\textnormal{ab}^\textnormal{a}$的旋动，旋动角度为$\theta$，则
+对于任意参照系$\{\textnormal{a}\}$和机体参照系$\{\textnormal{b}\}$，当$\{\textnormal{b}\}$相对$\{\textnormal{a}\}$发生关于螺旋轴$\hat{\mathbf{u}}_\textnormal{ab}^\textnormal{a}$的旋动，旋动角度为$\theta$，则
 \begin{align*}
 T(\theta)=e^{[\hat{\mathbf{u}}_\textnormal{ab}^\textnormal{a}]\theta}T_\textnormal{ab}(0) 
 \end{align*} \label{th:transformationexponential}
